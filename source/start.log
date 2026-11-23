@@ -1,0 +1,5 @@
+
+  vinext start  (port 4173)
+
+[vinext] Production server running at http://0.0.0.0:4173
+[vinext] Static file stream error for /tmp/build/dist/client/Aditi-Nair-Resume.pdf: Premature close
