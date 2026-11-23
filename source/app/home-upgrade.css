@@ -1,0 +1,50 @@
+/* Recruiter quick view, work explorer, role accordion, reveal-on-scroll */
+.quickView{max-width:1180px;margin:0 auto 8px;padding:28px 32px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px rgba(32,36,52,.06)}
+.quickView h2{font-size:26px;margin:6px 0 18px;letter-spacing:-.04em;font-weight:400}
+.quickView dl{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin:0 0 22px}
+.quickView dt{font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:800;color:var(--green);margin-bottom:6px}
+.quickView dd{margin:0;font-size:14px;line-height:1.45;color:#3b3945}
+.quickViewActions{display:flex;flex-wrap:wrap;gap:12px}
+.editorialPortfolio .quickView{width:calc(100% - 96px)}
+@media(max-width:980px){.quickView dl{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:780px){.editorialPortfolio .quickView{width:calc(100% - 40px);padding:22px 20px}.quickView dl{grid-template-columns:1fr;gap:14px}}
+.filterBar{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 8px}
+.filterChip{font:inherit;font-size:14px;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.filterChip:hover{border-color:var(--green)}
+.filterChip.active{background:var(--green);color:#fff;border-color:var(--green)}
+.workGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:20px}
+.workCard{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.workCard:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(32,36,52,.12)}
+.workThumb{display:block;aspect-ratio:900/473;overflow:hidden;background:var(--sand)}
+.workThumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s}
+.workCard:hover .workThumb img{transform:scale(1.03)}
+.workBody{padding:22px 24px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.workBody h3{font-size:24px;margin:0;letter-spacing:-.04em}
+.workBody p{margin:0;color:#595460;line-height:1.55}
+.workBody .cardLabel{color:var(--green)}
+.workLinks{margin-top:auto;padding-top:12px;display:flex;flex-wrap:wrap;gap:8px 20px;font-weight:700}
+.workLinks a{color:var(--green)}
+.workLinks .liveLink{color:var(--ink);text-decoration:underline;text-underline-offset:4px}
+@media(max-width:780px){.workGrid{grid-template-columns:1fr}}
+.roleList{margin-top:24px;border-top:1px solid var(--line)}
+.roleListTools{display:flex;justify-content:space-between;align-items:center;padding:14px 0;font-size:14px;color:#595460}
+.textButton{font:inherit;font-size:14px;background:none;border:0;color:var(--green);font-weight:700;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.roleItem{border-top:1px solid var(--line)}
+.roleItem summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:170px 1fr 28px;gap:24px;align-items:start;padding:22px 0}
+.roleItem summary::-webkit-details-marker{display:none}
+.roleItem time{font-size:14px;color:#595460;padding-top:3px}
+.roleTitle{display:flex;flex-direction:column;gap:6px}
+.roleTitle strong{font-size:19px;font-weight:600;letter-spacing:-.02em}
+.roleTitle em{font-style:normal;font-size:14px;color:#595460;line-height:1.5}
+.roleToggle{width:28px;height:28px;border:1px solid var(--line);border-radius:50%;position:relative;background:#fff}
+.roleToggle::before,.roleToggle::after{content:"";position:absolute;left:50%;top:50%;width:10px;height:1.5px;background:var(--ink);transform:translate(-50%,-50%);transition:transform .2s}
+.roleToggle::after{transform:translate(-50%,-50%) rotate(90deg)}
+.roleItem[open] .roleToggle::after{transform:translate(-50%,-50%) rotate(0)}
+.roleItem summary:hover .roleTitle strong{color:var(--green)}
+.roleBody{padding:0 52px 26px 194px}
+.roleBody p:last-child{margin:6px 0 0;line-height:1.65;color:#3b3945}
+@media(max-width:780px){.roleItem summary{grid-template-columns:1fr 28px;gap:6px 14px}.roleItem time{grid-column:1/2}.roleTitle{grid-column:1/2}.roleToggle{grid-row:1/3;grid-column:2}.roleBody{padding:0 0 22px}}
+.js-reveal [data-reveal]:not(.in){opacity:0;transform:translateY(18px)}
+[data-reveal]{transition:opacity .6s ease,transform .6s ease}
+@media(prefers-reduced-motion:reduce){[data-reveal]{transition:none}.workCard,.workThumb img{transition:none}}
+.statusChip{align-self:flex-start;display:inline-block}

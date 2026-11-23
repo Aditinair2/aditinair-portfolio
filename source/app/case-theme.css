@@ -1,0 +1,46 @@
+/* Case study + Work pages: same look as the home page (indigo, sans-serif, light). Text is unchanged. */
+.caseTheme{--orange:#4646a8;--cream:#eeedf7;--mint:#e5e7fa;--paper:#f8f8fc;min-height:100vh}
+.caseTheme,.caseTheme *{font-family:Arial,Helvetica,sans-serif!important}
+.caseTheme h1,.caseTheme h2{font-weight:400!important;letter-spacing:-.06em!important;color:var(--ink)}
+.caseTheme h3{font-weight:700!important;letter-spacing:-.03em!important;color:var(--ink)}
+.caseTheme .projectHero{padding-top:64px;padding-bottom:64px;gap:72px}
+.caseTheme .projectHero h1{font-size:clamp(46px,6vw,80px);line-height:.95}
+.caseTheme .projectDek{font-size:20px!important;line-height:1.5;color:#595460}
+.caseTheme .eyebrow{color:var(--green);font-size:11px;letter-spacing:.1em;font-weight:800;text-transform:uppercase}
+.caseTheme .projectFacts b,.caseTheme .findingGrid b,.caseTheme .aiSequence b{color:var(--green)}
+.caseTheme .boundaryNote,.caseTheme .principle,.caseTheme .truthNote{border-left-color:var(--green)}
+.caseTheme .button{border-color:var(--ink);border-radius:7px}
+.caseTheme .button.primary{background:var(--green);border-color:var(--green);color:#fff}
+.caseTheme .button.primary:hover{background:#35358c}
+.caseTheme .projectTint{background:var(--sand)}
+.caseTheme .evidenceSection{background:var(--sand)}
+.caseTheme .evidenceColumns article,.caseTheme .metricCard,.caseTheme .guardrailCard{background:#fff;border-radius:12px}
+.caseTheme .projectStatement,.caseTheme .swiggyStatement,.caseTheme .projectCta{background:var(--soft)!important;color:var(--ink)!important}
+.caseTheme .projectStatement h2,.caseTheme .projectCta h2,.caseTheme .projectStatement b,.caseTheme .principle b{color:var(--ink)!important}
+.caseTheme .projectStatement p,.caseTheme .statementGrid>div>p:first-child,.caseTheme .projectCta p,.caseTheme .projectCtaCopy,.caseTheme .principle{color:#4a4756!important}
+.caseTheme .projectStatement .eyebrow,.caseTheme .projectCta .eyebrow{color:var(--green)!important}
+.caseTheme .button.light{background:var(--green)!important;color:#fff!important;border-color:var(--green)!important}
+.caseTheme .button.outlineLight{background:transparent!important;color:var(--ink)!important;border-color:var(--ink)!important}
+.caseTheme .journeyGrid,.caseTheme .journeyGrid article,.caseTheme .findingGrid,.caseTheme .findingGrid article,.caseTheme .aiSequence,.caseTheme .aiSequence span{border-color:var(--line)!important}
+.caseTheme .pipelineIntro{background:var(--sand)}
+.caseTheme [class*="project"] p,.caseTheme .splitSection>div>p:not(.eyebrow),.caseTheme .evidenceColumns ul,.caseTheme .guardrailCard ul,.caseTheme .experimentGrid>div:first-child p:last-child,.caseTheme .methodologySection>p:last-child{color:#595460}
+.caseTheme .journeyGrid article>span,.caseTheme .responsibilityList b,.caseTheme .solutionFlow article>span,.caseTheme .metricCard span,.caseTheme .validationCards span,.caseTheme .solutionFlow article,.caseTheme .findingGrid{--x:0}
+.caseTheme .journeyGrid article>span,.caseTheme .responsibilityList b,.caseTheme .solutionFlow article>span,.caseTheme .metricCard span{color:var(--green)}
+.caseTheme .solutionFlow article,.caseTheme .validationCards span,.caseTheme .metricCard,.caseTheme .evidenceColumns .evidenceNo{border-top-color:var(--green)}
+.caseTheme .findingGrid b,.caseTheme .metricCard b,.caseTheme .validationCards b{color:var(--green)}
+.caseTheme .projectHero{align-items:start}
+.caseTheme .editorialNav{border-bottom:1px solid var(--line)}
+@media(max-width:780px){.caseTheme .projectHero{gap:32px;padding-top:40px}.caseTheme .projectDek{font-size:17px!important}}
+
+@media(max-width:780px){.editorialPortfolio .experienceTable article{grid-template-columns:1fr!important}}
+
+/* Navigation: show every link on small screens, mark the current page, keyboard focus, reduced motion */
+@media(max-width:780px){.editorialPortfolio .editorialNav nav a:nth-child(n){display:inline-block!important}.editorialPortfolio .editorialNav{flex-wrap:wrap;gap:4px 16px;padding:12px 0;align-items:center!important}.editorialPortfolio .editorialNav nav{flex-wrap:wrap;gap:4px 14px}}
+.editorialPortfolio .editorialNav nav a[aria-current="page"]{color:var(--green);text-decoration:underline;text-underline-offset:6px}
+.editorialPortfolio a:focus-visible{outline:2px solid #4646a8;outline-offset:3px;border-radius:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+.moreWork{padding-top:8px}
+.moreWork .editorialProjectGrid{grid-template-columns:repeat(3,1fr);margin-top:20px}
+.moreWork .editorialProject{min-height:0;padding:20px}
+.moreWork .editorialProject h3{font-size:19px!important}
+@media(max-width:780px){.moreWork .editorialProjectGrid{grid-template-columns:1fr}}
